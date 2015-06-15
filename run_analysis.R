@@ -1,5 +1,5 @@
 # Read files
-filepath <- "L:/MOOC/Getting and Cleaning Data/Course Project/UCI HAR Dataset"
+filepath <- "F:/MOOC/Getting and Cleaning Data/Course Project/UCI HAR Dataset"
 
 X_test <- read.table(paste(filepath, "/test/X_test.txt", sep = ""))
 
@@ -50,4 +50,4 @@ I <- summarise_each(H,funs(mean))
 # Replace Activity numbers with Activity names
 I[,1] <- merge(I[,1],activity_lables,by.x ="Activity" ,by.y ="V1" )[,2]
 
-write.table(I,file = "resault.txt")
+write.table(I,file = "resault.txt",row.names = FALSE)
